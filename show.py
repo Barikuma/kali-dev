@@ -15,4 +15,4 @@ for host in hosts:
     with ConnectHandler(**device) as netdev:
         output = netdev.send_command("show ip interface brief")
 
-    print("\nHost {}\n{}".format(host, output))
+    print(f"\nHost {host}\n{output}")
