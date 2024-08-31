@@ -1,17 +1,15 @@
 from netmiko import ConnectHandler
 from getpass import getpass
 
-username = input("Username: ")
-password = getpass()
 
-hosts = ["S1", "S2"]
+hosts = ["192.168.0.105", "192.168.0.106"]
 
 for host in hosts:
     device = {
                 'host': host,
                 'device_type': 'cisco_ios',
-                'username': username,
-                'password': password
+                'username': "admin",
+                'password': "cisco"
             }
 
     with ConnectHandler(**device) as netdev:
