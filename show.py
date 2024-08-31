@@ -16,3 +16,6 @@ for host in hosts:
         output = netdev.send_command("show ip interface brief")
 
     print(f"\nHost {host}\n{output}")
+
+
+print("END...")
